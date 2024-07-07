@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: source sans pro;
+ }
+ .header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./images/headphones_hero_1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+ }
+
+
+
+body {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1% 3% ;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 14px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 5%;
+    display: block;
+    background: #FF6565;
+    margin: auto;
+    position: absolute;
+    transition: 0.5s;
+    
+}
+
+.nav-links ul li:hover::after {
+width: 45%;
+}
+
+.surf {
+    height: 10%;
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.surf h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.surf p {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+button {
+width: 190px;
+height: 50px;
+flex-shrink: 0;
+padding: 0.5% 0%;
+margin-top: 2%;
+color: white;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-align: center;
+letter-spacing: 1px;
+border-radius: 50px;
+background: #FF6565;
+border: transparent;
+cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0000;
+    transition: .4s ease;
+}
+
+p:last-child {
+    color: rgb(255, 255, 255);
+    padding-bottom: 10%;
+    margin-top: 5%;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    height: 1px;
+    letter-spacing: 1px;
+
+}
+
+nav .fa {
+    display: none;
+}
+
+
+
+@media (max-width: 700px){
+    .surf h1 {
+        font-family: "Source Sans 3", sans-serif;
+        font-size: 20px;
+}
+.surf p {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 12px;
+    
+}
+.surf p {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 12px;
+}
+.nav-links ul li {
+    display: grid;
+}
+.nav-links {
+    position: absolute;
+    background: #FF6565;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+}
+
+nav .fa {
+    display: block;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.nav-links ul {
+    padding: 30px;
+} 
+
+
+/*-------whatwedo--------*/
+
+.whatwedo {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.whatwedo h1 {
+    color: black;
+    margin-top: 12%;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 26px;
+    
+}
+
+.whatwedo p {
+    color: black;
+    margin-top: 12%;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap; /* Allow wrapping to multiple lines if needed */
+    gap: 20px; /* Space between the divs */
+    
+}
+
+.site-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 30px;
+    margin-top: 15%;
+    background-color: #fdd4d4;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-grow: 1; /* Ensure all divs grow equally */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.site-col:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.site-col svg {
+    margin-bottom: 20px;
+    width: 40%;
+    height: auto;
+}
+
+.site-col p {
+    margin: 0;
+}
+
+@media (max-width: 700px){
+    .row {
+        flex-direction: column;
+    }
+}
